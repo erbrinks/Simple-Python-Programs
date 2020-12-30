@@ -1,0 +1,18 @@
+from random import randint
+
+
+secretNumber = randint(1, 1000)
+
+print("Please guess the number: ")
+tf = True
+while tf:
+    guess = int(input())
+    if guess > secretNumber:
+        print("The number is lower!")
+
+    if guess < secretNumber:
+        print("The number is higher!")
+
+    if guess == secretNumber:
+        print("Congratulations! You guessed the number!")
+        tf = False
